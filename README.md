@@ -74,36 +74,6 @@ Event Manager/
 - PostgreSQL (running locally or via Docker)
 - Paystack account (for payment integration)
 
-## Environment Variables
-
-### Backend (`server/.env`)
-
-```env
-DATABASE_URL=postgresql://user:password@localhost:5432/event_manager
-REDIS_URL=redis://localhost:6379
-JWT_SECRET=your_jwt_secret
-PORT=4000
-
-# Paystack
-PAYSTACK_SECRET_KEY=sk_test_xxxxx
-
-# Email (optional)
-SMTP_HOST=smtp.example.com
-SMTP_PORT=587
-SMTP_USER=your_email
-SMTP_PASS=your_password
-EMAIL_FROM=noreply@example.com
-
-# Frontend URL (for share links)
-FRONTEND_URL=http://localhost:5173
-```
-
-### Frontend (`client/.env`)
-
-```env
-VITE_API_URL=http://localhost:4000/api
-```
-
 ## Getting Started
 
 ### 1. Start Infrastructure
@@ -112,7 +82,7 @@ VITE_API_URL=http://localhost:4000/api
 # Start Redis container
 docker start redis
 
-# Ensure PostgreSQL is running on localhost:5432
+# Ensure PostgreSQL is running on localhost:
 ```
 
 ### 2. Install Dependencies
@@ -153,7 +123,7 @@ npm run dev
 npm run dev
 ```
 
-The frontend will be available at `http://localhost:5173` and the backend at `http://localhost:4000/api`.
+
 
 ## API Endpoints
 
@@ -247,5 +217,5 @@ npm test
 ```
 
 ## License
-
+This project was developed as an academic assessment project
 ISC
